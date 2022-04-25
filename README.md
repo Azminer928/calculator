@@ -2,9 +2,10 @@
 Simple Addition/Subtraction Calculator
 
 // Header file which has the information to include the inout/output realted functions.
-// Building of new structures upon code building unions.
+// The users first Entered Number!
         
     #include <stdio.h>
+// The users first Entered Number!
 
     int EnterFirstinteger(char* msg)
     {
@@ -14,7 +15,8 @@ Simple Addition/Subtraction Calculator
     return a;
     }
 
-// int new structures upon code. 
+ 
+// The users Second Entered Number!
 
     int EnterSecondinteger(char* msg)
     {
@@ -23,6 +25,9 @@ Simple Addition/Subtraction Calculator
     scanf_s(" %d", &b);
     return b;
     }
+    
+ // The program calling on user to pick an option to add or to subtract!
+    
     int Add1Subtract2(char* msg)
     {
     int c;
@@ -30,6 +35,9 @@ Simple Addition/Subtraction Calculator
     scanf_s(" %d", &c);
     return c;
     }
+    
+ // The application asking if the user wants to enter another math question!
+    
     int Again(char* msg)
     {
     int again;
@@ -39,7 +47,7 @@ Simple Addition/Subtraction Calculator
     }
     int main()
     {
-// "char" stores a single character and an "int is a varible used to store an integer.
+// The main program that puts together the math question and calls upon the users entered integers!
    
     char yes;
     int a, b, c, choice, again;
@@ -47,34 +55,39 @@ Simple Addition/Subtraction Calculator
     yes = 'y';
     while (yes == 'y' || yes == 'Y')
     {
-// int main represents that the function returns some integer even "0" at the end of the program.
+
+// Programming putting together the main numbers and calling on the integers!
 
         int main();
         char* First = "First Integer: ";
         printf("Please Enter First Number\n");
+// Calling the users First Entered Number!
+
         a = EnterFirstinteger(First);
         printf("\nCalculating...\n");
         
-// char* First = "Enter First Number"; is a varible that is being controlled by the user defined function.
+// Calling the users Second Entered Number.
 
         char* Second = "Second Integer: ";
         printf("\nPlease Enter Second Number\n");
         b = EnterSecondinteger(Second);
+// Putting together the users Numbers!
+
         printf("\nCalculating...\n");
         
-// This is the second varible being controlled by the user defined function.
+// Calling the action to add or to subtract!
 
         char* Third = "Add(1), Subtract(2):\n";
         printf("\nPlease Enter (1) for Addition OR Please Enter (2) for Subtraction!\n");
         c = Add1Subtract2(Third);
         printf("\nFinal choice Press 1 for Addition or 2 for Subtraction and Press Enter!\n");
         
-// This is the third varible controlled by the user defined function
+// Calling on the users choice to add and or to subtract and showing the question!
 
         scanf_s(" %d", & choice);
         
 // This segment is where the program will show the answer to the math question.
-// "Switch" is an alternate to if-else-if lader statement which allows to execute multiple operations for different possibles of values of a single varible. 
+// calling on the users choice and running in the background to find the answer! 
 
         switch (choice)
         {
@@ -88,6 +101,7 @@ Simple Addition/Subtraction Calculator
             break;
 
         }
+// Showing the Answer to the question at hand!
 
         char* Fourth = "Y or N?";
         printf("\nWould you want to Enter another Calculation?\n");
@@ -98,7 +112,7 @@ Simple Addition/Subtraction Calculator
         
         printf("\n");
     }
-// return 0; means that the program will execute successfully and did what it was intended to do. 
+// Ending the program unless the user picks the option to ask another question at hand!
 
         return 0;
 }
